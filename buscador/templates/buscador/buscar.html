@@ -1,0 +1,8 @@
+{% extends 'buscador/base.html' %}
+
+{% block content %}
+    <form method="get" action="{% url 'buscar' %}">
+        <input type="text" name="query" />
+        <input type="submit" value="Buscar" />
+    </form>
+{% endblock %}
