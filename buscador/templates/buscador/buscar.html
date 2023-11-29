@@ -1,8 +1,14 @@
 {% extends 'buscador/base.html' %}
 
 {% block content %}
-    <form method="get" action="{% url 'buscar' %}">
-        <input type="text" name="query" />
-        <input type="submit" value="Buscar" />
+  <div class="d-flex justify-content-center align-items-center">
+    <h1 class="display-4">El Que Busca Encuentra</h1>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <form class="form-inline" method="get" action="{% url 'buscar' %}">
+      <input class="form-control rounded-lg" type="text" name="query" placeholder="¿Qué estás buscando?" />
+      <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
     </form>
+  </div>
 {% endblock %}

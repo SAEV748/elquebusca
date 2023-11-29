@@ -53,7 +53,7 @@ def buscar(request):
         raices = procesar_consulta(query)
 
         # Reemplazar con la ruta correcta
-        archivo_path = 'D:/documentos/7moSemestre/RecuperaciónInformación/3erParcial/SearcherDjango/proyecto/buscador/indx_invertido/index_invertido.txt'
+        archivo_path = 'C:/Users/anton/Desktop/elquebusca/buscador/indx_invertido/salida.txt'
         resultados = buscar_urls(raices, archivo_path)
 
         return render(request, 'buscador/resultados.html', {'query': query, 'num_resultados': len(resultados['urls']), 'resultados': resultados})
